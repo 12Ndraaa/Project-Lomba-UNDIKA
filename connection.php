@@ -1,9 +1,9 @@
-<?php 
-    $mysqli = new mysqli("localhost","root","","toko_elite");
+<?php
+    $con = new mysqli("localhost", "root", "", "toko_elite"); // Changed variable name to $con
 
     // Check connection
-    if ($mysqli -> connect_errno) {
-    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-    exit();
+    if ($con->connect_errno) { // Updated to use $con
+        echo "Failed to connect to MySQL: " . $con->connect_error;
+        exit();
     }
 ?>

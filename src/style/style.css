@@ -1,0 +1,510 @@
+        /* Styling dari navbar sebelumnya */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background: white !important;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            padding: 5px 0;
+            background: linear-gradient(135deg, #28a745, #ffc107) !important; 
+        }
+        
+        .navbar.scrolled .nav-link,
+        .navbar.scrolled .navbar-brand {
+            color: white !important;
+        }
+        
+        .navbar.scrolled .form-control {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .navbar.scrolled .search-btn {
+            background-color: white;
+            color: #28a745; 
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: #28a745 !important; 
+            font-size: 1.7rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            font-family: 'Poppins', sans-serif; 
+        }
+        
+        .navbar-brand span {
+            color: #ffc107; 
+        }
+        
+        .navbar-brand:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: #2c3e50 !important; 
+            font-weight: 500;
+            margin: 0 8px;
+            position: relative;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif; 
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-3px);
+        }
+        
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #28a745, #ffc107); 
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover:before {
+            width: 100%;
+        }
+        
+        .search-form {
+            position: relative;
+            display: flex;
+            margin: 0 15px;
+        }
+        
+        .form-control {
+            border-radius: 50px !important;
+            border: none;
+            background-color: #f1f3f5 !important;
+            padding-left: 25px;
+            transition: all 0.3s ease;
+            width: 200px;
+        }
+        
+        .form-control:focus {
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25); 
+            width: 250px;
+        }
+        
+        .search-btn {
+            background: linear-gradient(135deg, #28a745, #ffc107); 
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0 20px;
+            margin-left: -45px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .search-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4); 
+        }
+        
+        .cart-icon {
+            position: relative;
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .cart-icon:hover {
+            color: #28a745;
+            transform: scale(1.1);
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #ff4757;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem 0.7rem;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-toggler:focus {
+            outline: none;
+            box-shadow: none; 
+        }
+        
+        .navbar-toggler-icon {
+            background-image: none;
+            position: relative;
+            height: 2px;
+            width: 22px;
+            background-color: #28a745; 
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-toggler-icon:before,
+        .navbar-toggler-icon:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 22px;
+            background-color: #28a745; 
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-toggler-icon:before {
+            transform: translateY(-6px);
+        }
+        
+        .navbar-toggler-icon:after {
+            transform: translateY(6px);
+        }
+        
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+            background-color: transparent;
+        }
+        
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+            transform: rotate(45deg);
+            background-color: white;
+        }
+        
+        .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+            transform: rotate(-45deg);
+            background-color: white;
+        }
+        
+        .navbar.scrolled .navbar-toggler-icon,
+        .navbar.scrolled .navbar-toggler-icon:before,
+        .navbar.scrolled .navbar-toggler-icon:after {
+            background-color: white;
+        }
+        
+        /* NAVBAR RESPONSIF */
+    @media (max-width: 991px) {
+                .search-form {
+                    margin: 10px 0;
+                }
+
+                .form-control {
+                    width: 100% !important;
+                }
+
+                .form-control:focus {
+                    width: 100%;
+                }
+
+                .search-btn {
+                    margin-left: 0;
+                    width: 40px;
+                    margin-top: 10px;
+                }
+
+                .navbar-collapse {
+                    background: white;
+                    padding: 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                }
+
+                .navbar.scrolled .navbar-collapse {
+                    background: rgba(255, 255, 255, 0.95);
+                }
+
+                /* NEW: Styles for text within the collapsed navbar when scrolled */
+                .navbar.scrolled .navbar-collapse .nav-link,
+                .navbar.scrolled .navbar-collapse .navbar-text,
+                .navbar.scrolled .navbar-collapse a { /* Targeting links and general text */
+                    color: black !important; /* Forces text to be black */
+                }
+
+                /* You might also need to target icons or specific elements if they aren't changing */
+                .navbar.scrolled .navbar-collapse .cart-icon i {
+                    color: black !important;
+                }
+
+
+                .cart-icon {
+                    margin-left: 0;
+                    margin-top: 15px;
+                    display: inline-block;
+                }
+            }
+
+            @keyframes fadeInDown {
+                from {
+                    opacity: 0;
+                    transform: translate3d(0, -20px, 0);
+                }
+                to {
+                    opacity: 1;
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+
+            .fadeInDown {
+                animation-name: fadeInDown;
+                animation-duration: 0.5s;
+            }
+
+
+        /* Styling dari halaman utama Anda */
+        :root {
+            --bs-primary: #28a745; /* Hijau untuk tema pertanian */
+            --bs-secondary: #6c757d;
+            --bs-info: #17a2b8;
+            --bs-warning: #ffc107;
+            --bs-danger: #dc3545;
+            --bs-orange: #fd7e14;
+            --bs-light-green: #e6ffe6; /* Hijau sangat muda untuk background */
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bs-light-green); /* Latar belakang hijau muda */
+            color: #333;
+            padding-top: 90px; /* Menambahkan padding agar konten tidak tertutup navbar fixed-top */
+        }
+
+        /* HERO */
+        .hero-section {
+            position: relative;
+            background-size: cover; 
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 50px;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            z-index: 0;
+        }
+        .hero-section h1, .hero-section p, .hero-section .btn-hero {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-section video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .hero-section h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero-section p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-hero {
+            background-color: var(--bs-orange);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-hero:hover {
+            background-color: #e66a00;
+            color: white;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 600;
+            color: var(--bs-primary);
+        }
+        .feature-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            height: 100%; 
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .feature-card .icon {
+            font-size: 3em;
+            color: var(--bs-primary);
+            margin-bottom: 20px;
+        }
+
+        /* PRODUCT CARD */
+.product-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card .card-body {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card .card-title {
+    font-size: 1.5em; /* Meningkatkan ukuran font */
+    font-weight: 700; /* Mengubah menjadi bold */
+    color: #2e7d32; /* Warna hijau */
+    margin-bottom: 10px;
+}
+
+.product-card .card-text {
+    color: #555; /* Mengubah warna teks menjadi sedikit lebih gelap */
+    flex-grow: 1;
+    line-height: 1.5; /* Menambah jarak antar baris */
+}
+
+.product-card .price {
+    font-size: 1.6em; /* Meningkatkan ukuran font */
+    font-weight: 700;
+    color: #ff5722; /* Menggunakan warna oranye */
+    margin-top: 15px;
+    text-align: left; /* Menyelaraskan teks ke kiri */
+}
+
+/* Button styling */
+.btn-green {
+    background-color: #2e7d32; /* Warna hijau */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-green:hover {
+    background-color: #1b5e20; /* Warna hijau lebih gelap */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+
+/* FOOTER */
+.footer-custom {
+    background-color: #343a40; 
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden; /* Untuk efek animasi */
+}
+
+.footer-custom h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-custom h4::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--bs-primary);
+    margin-top: 10px;
+    transition: width 0.3s ease;
+}
+
+.footer-custom h4:hover::after {
+    width: 100%; /* Efek hover pada garis bawah */
+}
+
+.footer-custom a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-custom a:hover {
+    color: var(--bs-primary);
+}
+
+.footer-custom .social-icons {
+    margin-top: 15px;
+}
+
+.footer-custom .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.footer-custom .social-icon:hover {
+    transform: scale(1.2); /* Efek zoom saat hover */
+}
+
+.footer-custom p {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .footer-custom h4 {
+        font-size: 1.25em;
+    }
+
+    .footer-custom .social-icon {
+        font-size: 1.2em;
+    }
+}
